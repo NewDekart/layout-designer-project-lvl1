@@ -1,86 +1,138 @@
 /** CSS STYLE **/
 :root {
-    --white: #fff;
-    --translucent-white: #d7ccc0;
-    --light: #f5f4f0;
-    --primary: #fe8a02;
-    --primary-dark: #42413c;
-    --dark: #2a2626;
-    --transulcent-dark: #908d8b;
-    --brown: #b09a81;
-    --blue: #1085c5;
+  --white: #fff;
+  --translucent-white: #d7ccc0;
+  --light: #f5f4f0;
+  --primary: #fe8a02;
+  --primary-dark: #42413c;
+  --dark: #2a2626;
+  --transulcent-dark: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
 
-    box-sizing: border-box;
-    color: var(--dark);
-    font: normal 16px/1.6em "Open Sans", sans-serif;
+  box-sizing: border-box;
+
+  color: var(--dark);
+  font: normal 16px/1.6em "Open Sans", sans-serif;
 }
 
 @font-face {
-    font-weight: 400;
-    font-family: "Open Sans";
-    src: url(/src/assets/fonts/OpenSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-family: "Open Sans";
+  src: url(/src/assets/fonts/OpenSans-Regular.ttf) format("truetype");
 }
 
 @font-face {
-    font-weight: 400;
-    font-family: "Neucha";
-    src: url(/src/assets/fonts/Neucha-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-family: "Neucha";
+  src: url(/src/assets/fonts/Neucha-Regular.ttf) format("truetype");
 }
 
 .body {
-    margin: 0;
+  margin: 0;
 }
 
 .background {
-    position: relative;
+  position: relative;
 }
 
-.background::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+.background::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 
-    background: url(/src/assets/images/background.png);
-    opacity: .06;
+  background: url(/src/assets/images/background.png) no-repeat;
+  background-size: cover;
+  opacity: 0.1;
 
-    content: '';
+  content: '';
+}
+
+.header-image {
+  position: absolute;
+  top: 55px;
+  right: -270px;
+  z-index: -1;
+
+  height: 525px;
 }
 
 .h {
-    margin: 0;
+  margin: 0;
 
-    font: normal 16px/1.2em "Neucha", sans-serif;
+  font: normal 16px/1.2em "Neucha", sans-serif;
 }
 
 .content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 100px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 0;
 }
 
 .h1 {
-    font-size: 72px;
+  font-size: 72px;
 }
 
 .h2 {
-    font-size: 62px;
+  font-size: 62px;
 }
 
 .h3 {
-    font-size: 34px;
+  font-size: 34px;
 }
 
-.w-50pc {
-    width: 50%;
+.right {
+  width: 50%;
+  padding-left: 15px;
+}
+
+.left {
+  width: 50%;
+  padding-right: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+
+  text-decoration: none;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mt-185 {
+  margin-top: 185px;
 }
 
 .c-primary {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 .c-dark {
-    color: var(--dark);
+  color: var(--dark);
+}
+
+.c-white {
+  color: var(--white);
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.bg-primary {
+  background-color: var(--primary);
 }
