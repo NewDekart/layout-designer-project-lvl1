@@ -2,13 +2,13 @@
 @font-face {
   font-weight: 400;
   font-family: "Open Sans";
-  src: url(/src/assets/fonts/OpenSans-Regular.ttf) format("truetype");
+  src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-weight: 400;
   font-family: "Neucha";
-  src: url(/src/assets/fonts/Neucha-Regular.ttf) format("truetype");
+  src: url("../assets/fonts/Neucha-Regular.ttf") format("truetype");
 }
 
 :root {
@@ -48,7 +48,7 @@ body {
   left: 0;
   z-index: -1;
 
-  background: url(/src/assets/images/background.png) no-repeat;
+  background: url("../assets/images/background.png") no-repeat;
   background-size: cover;
 
   opacity: 0.1;
@@ -124,7 +124,7 @@ body {
   width: 20px;
   height: 20px;
 
-  background: url(/src//assets/images/send.svg);
+  background: url("../assets/images/send.svg");
   background-position: center;
 
   content: '';
