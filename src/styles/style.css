@@ -1,21 +1,4 @@
 /** CSS STYLE **/
-:root {
-  --white: #fff;
-  --translucent-white: #d7ccc0;
-  --light: #f5f4f0;
-  --primary: #fe8a02;
-  --primary-dark: #42413c;
-  --dark: #2a2626;
-  --transulcent-dark: #908d8b;
-  --brown: #b09a81;
-  --blue: #1085c5;
-
-  box-sizing: border-box;
-
-  color: var(--dark);
-  font: normal 16px/1.6em "Open Sans", sans-serif;
-}
-
 @font-face {
   font-weight: 400;
   font-family: "Open Sans";
@@ -28,12 +11,32 @@
   src: url(/src/assets/fonts/Neucha-Regular.ttf) format("truetype");
 }
 
-.body {
+:root {
+  --white: #fff;
+  --translucent-white: #d7ccc0;
+  --light: #f5f4f0;
+  --primary: #fe8a02;
+  --primary-dark: #42413c;
+  --dark: #2a2626;
+  --transulcent-dark: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
+
+  color: var(--dark);
+  font: normal 16px/1.6em "Open Sans", sans-serif;
+}
+
+:root * {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
 }
 
 .background {
   position: relative;
+  opacity: 0.9;
 }
 
 .background::before {
@@ -46,6 +49,7 @@
 
   background: url(/src/assets/images/background.png) no-repeat;
   background-size: cover;
+
   opacity: 0.1;
 
   content: '';
@@ -98,7 +102,104 @@
   display: inline-block;
   padding: 12px 24px;
 
+  border: 0;
+
   text-decoration: none;
+
+  cursor: pointer;
+}
+
+.btn-send {
+  position: relative;
+
+  width: 70px;
+}
+
+.btn-send::before {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+
+  width: 20px;
+  height: 20px;
+
+  background: url(/src//assets/images/send.svg);
+  background-position: center;
+
+  content: '';
+}
+
+.video {
+  position: absolute;
+  top: 357px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav-item {
+  max-width: 350px;
+  margin-top: 20px;
+  padding: 24px;
+}
+
+.nav-card {
+  text-decoration: none;
+
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.nav-card:hover {
+  background-color: var(--primary);
+}
+
+.nav-card:hover > * {
+  color: var(--white);
+}
+
+.nav-number {
+  font: 64px/1 "Neucha", sans-serif;
+}
+
+.secondary-text {
+  font: normal 24px/1.2 "Neucha", sans-serif;
+}
+
+.content-image {
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+}
+
+.content-preview {
+  font: 34px/1.2 "Neucha", sans-serif;
+}
+
+.description-header {
+  font-size: 14px;
+  font-style: bold;
+  text-transform: uppercase;
+}
+
+.email {
+  display: block;
+  flex-grow: 1;
+  height: 50px;
+  padding: 15px;
+
+  border: 1px solid #e3e3e3;
+  border-left: 0;
+}
+
+.contact-info {
+  margin-top: 60px;
+
+  font-size: 14px;
 }
 
 .pos-rel {
@@ -109,30 +210,146 @@
   display: flex;
 }
 
+.at-center {
+  align-items: center;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mt-9 {
+  margin-top: 9px;
+}
+
 .mt-24 {
   margin-top: 24px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-100 {
+  margin-top: 100px;
 }
 
 .mt-185 {
   margin-top: 185px;
 }
 
+.mt-383 {
+  margin-top: 383px;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-0-55 {
+  padding: 0 55px;
+}
+
+.pt-55 {
+  padding-top: 55px;
+}
+
+.pt-180 {
+  padding-top: 180px;
+}
+
+.pb-55 {
+  padding-bottom: 55px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.of-hidden {
+  overflow: hidden;
+}
+
 .c-primary {
   color: var(--primary);
+}
+
+.c-primary-dark {
+  color: var(--primary-dark);
 }
 
 .c-dark {
   color: var(--dark);
 }
 
+.c-trans-dark {
+  color: var(--transulcent-dark);
+}
+
 .c-white {
   color: var(--white);
+}
+
+.c-trans-white {
+  color: var(--translucent-white);
+}
+
+.c-brown {
+  color: var(--brown);
 }
 
 .fw-bold {
   font-weight: bold;
 }
 
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-18 {
+  font-size: 18px;
+}
+
+.fs-52 {
+  font-size: 52px;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
 .bg-primary {
   background-color: var(--primary);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+
+.bg-brown {
+  background-color: var(--brown);
 }
