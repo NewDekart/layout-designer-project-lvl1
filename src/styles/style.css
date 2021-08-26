@@ -57,7 +57,6 @@ body {
   position: absolute;
   top: 55px;
   right: -270px;
-  z-index: -1;
 
   height: 525px;
 }
@@ -202,6 +201,10 @@ body {
 
 .pos-rel {
   position: relative;
+}
+
+.z-1 {
+  z-index: 1;
 }
 
 .d-flex {
