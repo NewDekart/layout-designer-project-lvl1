@@ -36,8 +36,6 @@ body {
 
 .background {
   position: relative;
-
-  opacity: 0.9;
 }
 
 .background::before {
@@ -46,7 +44,6 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1;
 
   background: url("../assets/images/background.png") no-repeat;
   background-size: cover;
